@@ -27,7 +27,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <p className="font-serif text-[6.6vw] text-center leading-none text-amber-950">
+          {/* THE DEVELOPMENT TIMES */}
+          SATYANARAYAN PRASHAR
+        </p>
         {children}
+        
       </body>
     </html>
   );
