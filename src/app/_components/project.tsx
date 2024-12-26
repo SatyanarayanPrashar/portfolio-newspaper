@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProjectSection: React.FC = (props) => {
+const ProjectSection: React.FC = () => {
     return (
         <div className="w-full mt-4 md:my-5 bg-red-90 flex gap-4 text-justify">
             <div className="w-[25%] hidden md:block">
