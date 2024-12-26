@@ -9,18 +9,15 @@ const Navbar: React.FC = () => {
     useEffect(() => {
         const today = new Date();
 
-        // Use the correct type for options
         const options: Intl.DateTimeFormatOptions = {
-        weekday: "long", // "long", "short", or "narrow"
-        year: "numeric", // "2-digit" or "numeric"
-        month: "long",   // "long", "short", or "narrow"
-        day: "numeric",  // "2-digit" or "numeric"
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
         };
 
-        // Format the date using toLocaleDateString with the correct options
         const formattedDate = today.toLocaleDateString("en-US", options);
 
-        // Add suffix for the day
         const day = today.getDate();
         const daySuffix =
         day % 10 === 1 && day !== 11
@@ -40,10 +37,11 @@ const Navbar: React.FC = () => {
             <div className="h-1 w-full bg-amber-950"></div>
             <div className="py-1 text-amber-950 mt-2 w-full flex  items-center border-b border-amber-950 text-[1.4vw] md:text-[1.2vw]">
                 <div className="flex gap-4 md:gap-6">
-                <p>About</p>
-                <p>Projects</p>
-                <p>Blogs</p>
-                <p>Contact</p>
+                    {/* <p>About</p>
+                    <p>Projects</p>
+                    <p>Blogs</p>
+                    <p>Contact</p> */}
+                    <p>Starting at SAP Concur this January!</p>
                 </div>
                 <p className="font-serif ml-auto">{currentDate}</p>
             </div>
