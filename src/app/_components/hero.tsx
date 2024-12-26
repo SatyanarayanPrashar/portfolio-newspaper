@@ -4,7 +4,7 @@ const HeroComponent: React.FC = () => {
     return (
         <div className="flex flex-col md:flex-row w-full gap-2">
             <div className="flex flex-col w-full md:w-[80%]">
-                <p className="text-[3.8vw] md:text-[2.7vw] font-bold font-serif">BANGALORE'S MOST WANTED DEVELOPER</p>
+                <p className="text-[3.8vw] md:text-[2.7vw] font-bold font-serif">BANGALORE&apos;S MOST WANTED DEVELOPER</p>
                 <div className="h-[30vw] w-full flex gap-3">
                     <img
                     src="hero.png"
@@ -20,7 +20,7 @@ const HeroComponent: React.FC = () => {
                 </div>
             </div>
             <div className="w-[30%] px-3 hidden md:block text-justify text-[1.3vw] md:text-[1.1vw]">
-                <p className="text-[1.7vw] font-serif text-center font-semibold">SATYA'S LATEST FEAT</p>
+                <p className="text-[1.7vw] font-serif text-center font-semibold">SATYA&apos;S LATEST FEAT</p>
                 <img
                     src="edloops.png"
                     alt="edloops"
