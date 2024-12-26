@@ -17,7 +17,7 @@ const ProjectSection: React.FC = () => {
                             <img
                                 src={data.project.treeved.img}
                                 alt="treeved"
-                                className="h-[13vw] w-[20vw]  md:h-[10vw] md:w-[18.5vw]"
+                                className="h-[11vw] w-[20vw]  md:h-[10vw] md:w-[18.5vw] grayscale"
                             />
                             <div>
                                 <p className="font-semibold">{data.project.treeved.title}</p>
@@ -29,30 +29,33 @@ const ProjectSection: React.FC = () => {
                             <img
                                 src={data.project.edloops.img}
                                 alt="edloops"
-                                className="h-[13vw] w-[20vw] md:h-[10vw] md:w-[18.5vw]"
+                                className="h-[11vw] w-[20vw] md:h-[10vw] md:w-[18.5vw] grayscale"
                             />
                             <div>
                                 <p className="font-semibold">{data.project.edloops.title}</p>
                                 <p>{data.project.edloops.desc}</p>
                             </div>
                         </div>
-
-                        <p className="font-semibold mt-1 md:mt-4">{data.project.faceRecognition.title}</p>
-                        <p>{data.project.faceRecognition.desc}</p>
-
+                        {/* Recruto */}
+                        <div className="flex gap-2 mt-1 md:mt-4">
+                            <img
+                                src={data.project.recruto.img}
+                                alt="Recruto"
+                                className="h-[11vw] w-[20vw] md:h-[10vw] md:w-[18.5vw] grayscale"
+                            />
+                            <div>
+                                <p className="font-semibold">{data.project.recruto.title}</p>
+                                <p>{data.project.recruto.desc}</p>
+                            </div>
+                        </div>
                     </div>
                     <div className="w-[35%] md:w-[48%] h-full md:px-4 text-[1.3vw] md:text-[1.1vw] mt-1 md:mt-4">
-                        {/* Wejournal */}
-                        <img
-                            src={data.project.wejournal.img}
-                            alt="wejournal"
-                            className="h-[12vw] w-full"
-                        />
-                        <p className="font-semibold">{data.project.wejournal.title}</p>
-                        <p>{data.project.wejournal.desc}</p>
+                        <p className="font-semibold text-[1.3vw] underline">ML Projects</p>
+                        <p className="font-semibold">{data.project.faceRecognition.title}</p>
+                        <p>{data.project.faceRecognition.desc}</p>
 
-                        <p className="font-semibold mt-1">{data.project.recruto.title}</p>
-                        <p>{data.project.recruto.desc}</p>
+                        <p className="font-semibold mt-4">{data.project.research.title}</p>
+                        <p>{data.project.research.desc}</p>
                     </div>
                 </div>
             </div>
@@ -83,11 +86,16 @@ const data = {
         },
         recruto: {
             title: "Recruto",
-            desc: "Used Selenium and Celery to scrape data from other recruitment platform. Cached the API response using a Redis database, which reducing response time by 92.5%. Techstack consisted of TypeScript, Python, Next JS, Django Rest Framework, Redis and Docker",
+            desc: "Used Selenium and Celery to scrape data from other recruitment platform. Cached the API response and most request pages using Redis database, which reducing response time of the next call by 92.5%.",
+            img: "recruto.jpeg"
         },
         faceRecognition: {
             title: "Face Recognition Attendance System",
             desc: "A full attendance management system that uses CNN based face recognition to mark attendance. The system is capable of checking if the student is in the designated classroom or not.  Techstack consisted of Python, Flask, OpenCV, TensorFlow.",
+        },
+        research : {
+            title: "Research Paper Chatbot",
+            desc: "Built a chat bot to answer the questions based on the input Research Paper. Utilised Langchain, OpenAI NLM model, and Python. Chained NLM model with Langchain to answer questions and provide extra context. Implemented RAG technique for augmenting LLM with additional dat.  Techstack consisted of Python, OpenAI, Langchain.",
         }
     }
 }
