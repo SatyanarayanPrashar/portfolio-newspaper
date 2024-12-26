@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "./_components/navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,12 +28,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <p className="font-serif text-[6.6vw] text-center leading-none text-amber-950">
+        <p className="font-serif text-[6.4vw] text-center leading-none text-amber-950 tracking-wider">
           {/* THE DEVELOPMENT TIMES */}
           SATYANARAYAN PRASHAR
         </p>
+        <Navbar />
         {children}
-        
+
       </body>
     </html>
   );
