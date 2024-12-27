@@ -1,4 +1,5 @@
 import React from 'react';
+import { LuExternalLink } from 'react-icons/lu';
 
 const ProjectSection: React.FC = () => {
     return (
@@ -19,8 +20,13 @@ const ProjectSection: React.FC = () => {
                                 alt="treeved"
                                 className="h-[11vw] w-[20vw]  md:h-[10vw] md:w-[18.5vw] grayscale"
                             />
-                            <div>
-                                <p className="font-semibold">{data.project.treeved.title}</p>
+                            <div className=''>
+                                <div className='flex gap-2 items-center'>
+                                    <p className="font-semibold">{data.project.treeved.title}</p>
+                                    <a href='https://treeved-s.vercel.app/profile/Satya' target='_blank' className=''>
+                                        <LuExternalLink className='hover:text-blue-500 hover:text-[18px]'/>
+                                    </a>
+                                </div>
                                 <p>{data.project.treeved.desc}</p>
                             </div>
                         </div>
@@ -32,7 +38,12 @@ const ProjectSection: React.FC = () => {
                                 className="h-[11vw] w-[20vw] md:h-[10vw] md:w-[18.5vw] grayscale"
                             />
                             <div>
-                                <p className="font-semibold">{data.project.edloops.title}</p>
+                                <div className='flex gap-2 items-center'>
+                                    <p className="font-semibold">{data.project.edloops.title}</p>
+                                    <a href='https://edloops.com/' target='_blank' className=''>
+                                        <LuExternalLink className='hover:text-blue-500 hover:text-[18px]'/>
+                                    </a>
+                                </div>
                                 <p>{data.project.edloops.desc}</p>
                             </div>
                         </div>
@@ -44,17 +55,35 @@ const ProjectSection: React.FC = () => {
                                 className="h-[11vw] w-[20vw] md:h-[10vw] md:w-[18.5vw] grayscale"
                             />
                             <div>
-                                <p className="font-semibold">{data.project.recruto.title}</p>
+                                <div className='flex gap-2 items-center'>
+                                    <p className="font-semibold">{data.project.recruto.title}</p>
+                                    <a href='https://github.com/SatyanarayanPrashar/recuto_be' target='_blank' className=''>
+                                        <LuExternalLink className='hover:text-blue-500 hover:text-[18px]'/>
+                                    </a>
+                                </div>
                                 <p>{data.project.recruto.desc}</p>
                             </div>
                         </div>
                     </div>
                     <div className="w-[35%] md:w-[48%] h-full md:px-4 text-[1.3vw] md:text-[1.1vw] mt-1 md:mt-4">
                         <p className="font-semibold text-[1.3vw] underline">ML Projects</p>
-                        <p className="font-semibold">{data.project.faceRecognition.title}</p>
+                        <div className='flex gap-2 items-center'>
+                            <p className="font-semibold">{data.project.faceRecognition.title}</p>
+                            <a href='https://github.com/SatyanarayanPrashar/attendanceSystem' target='_blank' className=''>
+                                <LuExternalLink className='hover:text-blue-500 hover:text-[18px]'/>
+                            </a>
+                        </div>
+                        
                         <p>{data.project.faceRecognition.desc}</p>
 
-                        <p className="font-semibold mt-4">{data.project.research.title}</p>
+                        <div className='flex gap-2 items-center mt-4'>
+                            <p className="font-semibold">{data.project.research.title}</p>
+                            <a href='https://github.com/SatyanarayanPrashar/research-paper-chatbot' target='_blank' className=''>
+                                <LuExternalLink className='hover:text-blue-500 hover:text-[18px]'/>
+                            </a>
+                        </div>
+
+                        
                         <p>{data.project.research.desc}</p>
                     </div>
                 </div>
