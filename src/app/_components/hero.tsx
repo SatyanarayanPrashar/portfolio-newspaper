@@ -1,45 +1,9 @@
 "use client"
 
-import { useState } from 'react';
-import { FaReact } from 'react-icons/fa6';
-import { IoLogoSass } from 'react-icons/io';
-import { RiTailwindCssFill } from 'react-icons/ri';
-import { SiNextdotjs } from 'react-icons/si';
-import { TbBrandCpp, TbBrandJavascript, TbBrandTypescript, TbBrandPython, TbBrandDjango, TbBrandFlutter, TbBrandDocker, TbBrandAws } from 'react-icons/tb';
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import TechContantSection from './techcontact';
 
 const HeroComponent: React.FC = () => {
-    const [email, setEmail] = useState<string>('');
-    const notify = (message: string) => toast(message);
-
-    const handleConnect = async () => {
-        if (!email) {
-            alert('Please enter an email address!');
-            return;
-        }
-
-        try {
-            const response = await fetch('/api/emailhandler', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ email }),
-            });
-
-            if (response.ok) {
-                notify("Thanks for reaching out! I'll get back to you soon.");
-            } else {
-                notify("Something is broken :( reach me at satyabuilds@gmail.com");
-            }
-        } catch (error) {
-            console.error('Error:', error);
-            notify('An error occurred while sending the email.');
-        }
-    };
-
     return (
         <div className="flex flex-col md:flex-row w-full gap-2">
             <div className="flex flex-col w-full md:w-[80%]">
