@@ -2,6 +2,7 @@
 import Experience from "./_components/experience";
 import HeroComponent from "./_components/hero";
 import ProjectSection from "./_components/project";
+import TechContantSection from "./_components/techcontact";
 
 export default function Home() {
 
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroComponent />
       <ProjectSection />
       <Experience />
+      <TechContantSection classname="flex md:hidden w-full justify-center items-center" gridclass="grid-cols-12 text-[5vw]"/>
     </div>
   );
 }

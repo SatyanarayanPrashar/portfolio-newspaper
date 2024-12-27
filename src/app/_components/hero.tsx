@@ -8,6 +8,7 @@ import { SiNextdotjs } from 'react-icons/si';
 import { TbBrandCpp, TbBrandJavascript, TbBrandTypescript, TbBrandPython, TbBrandDjango, TbBrandFlutter, TbBrandDocker, TbBrandAws } from 'react-icons/tb';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import TechContantSection from './techcontact';
 
 const HeroComponent: React.FC = () => {
     const [email, setEmail] = useState<string>('');
@@ -55,46 +56,7 @@ const HeroComponent: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="w-[30%] px-3 hidden md:flex flex-col text-justify text-[1.3vw] md:text-[1.1vw] items-center">
-                <p className="text-[1.7vw] font-serif text-center font-semibold border-b border-amber-950">
-                    TECH BEHIND THE CODE
-                </p>
-                <div className="grid grid-cols-4 text-[4.5vw] my-4 gap-y-4 w-full text-amber-950">
-                    <TbBrandCpp />
-                    <TbBrandJavascript />
-                    <TbBrandTypescript />
-                    <TbBrandPython />
-                    <FaReact />
-                    <SiNextdotjs />
-                    <RiTailwindCssFill />
-                    <IoLogoSass />
-                    <TbBrandDjango />
-                    <TbBrandFlutter />
-                    <TbBrandDocker />
-                    <TbBrandAws />
-                </div>
-                <div className="flex flex-col gap-2 border border-amber-950 w-full text-[1.3vw] md:text-[1.1vw] p-3">
-                    <p>
-                        Have something I can build for you? <br /> Drop your email and I will reach
-                        out to you.
-                    </p>
-                    <input
-                        type="text"
-                        placeholder="Email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        className="bg-transparent border border-amber-950/40 py-1 px-3 text-amber-950 focus:outline-none"
-                    />
-                    <button
-                        className="bg-amber-950 py-1 px-3 text-white w-[40%] text-[1.3vw] md:text-[1.1vw]"
-                        onClick={handleConnect}
-                    >
-                        Connect
-                    </button>
-                </div>
-            </div>
-
-            <ToastContainer />
+            <TechContantSection classname='hidden md:flex'/>
         </div>
     );
 };
